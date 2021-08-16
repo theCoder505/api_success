@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> Untitled Document Edits </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +15,6 @@
 
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
         body {
             font-family: 'Roboto';
             font-size: 16px;
@@ -34,35 +31,53 @@
         }
         
         #allInputs {
-            margin: 0px auto;
-            width: 80%;
-            padding: 25px 40px;
-            background: #ddd;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: #ddd;
+            box-shadow: inset 0px 0px 25px #757474;
+            padding: 15px;
             border-radius: 15px;
-            box-shadow: inset 0px 0px 20px #8c8686;
         }
         
-        #allInputs input {
-            width: 95%;
-            padding: 7px 15px;
-            border-radius: 10px;
+        .input_holder {
+            margin: 20px;
+        }
+        
+        .input_holder input {
+            width: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            border-radius: 50px;
             border: none;
-            box-shadow: 0px 0px 4px #464646;
-            font-size: 15px;
-            font-family: robot;
+            box-shadow: 0px 0px 5px black;
             text-transform: capitalize;
+            font-size: 15px;
         }
         
         #search {
-            width: 150px;
-            padding: 7px;
-            font-size: 18px;
-            border-radius: 50px;
-            border: none;
+            margin: 20px auto;
+            padding: 10px 40px;
             background: #fff;
-            color: #463e3e;
-            font-weight: 600;
-            box-shadow: 0px 0px 7px black;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0px 0px 10px #3d3a3a;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: sans;
+            font-style: italic;
+        }
+        
+        #Notice {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 45px;
+            font-style: italic;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: initial;
         }
         
         h1 {
@@ -87,53 +102,25 @@
         .job:nth-of-type(even) {
             background-color: #ffffff;
         }
-        
-        #Notice {
-            border: 3px solid #c1bfbf;
-            margin: 20px;
-            margin-bottom: 20px;
-            padding: 10px;
-            text-align: center;
-            line-height: 1.5;
-            margin-bottom: 40px;
-            background: #fff;
-            color: black;
-            font-weight: bold;
-            border-radius: 15px;
-        }
-        
-        @media screen and (max-width: 800px) {
-            #allInputs {
-                width: auto;
-            }
-            #Notice {
-                margin: 30px 0px;
-                margin-bottom: 40px;
-            }
-        }
     </style>
-
+    <title> API SUCCESS </title>
 </head>
 
 <body>
 
-    <br><br><br>
 
     <div id="allInputs">
         <div id="Notice">
-            <b>
-                Always try with the legit Keyword! If No data received, try with a BOLD keyword then. Else, there's
-                 no same DATA!... 
-            </b>
+            Always try with the legit Keyword! If No data received, try with a BOLD keyword then. Else, there's no same DATA!...
         </div>
-        <input type="text" name="" placeholder="Search By Job Title" id="jobTitle"><br><br>
-        <input type="text" name="" placeholder="Preffered Location" id="jobLocation"><br><br>
-        <input type="text" name="" placeholder="Preffered Salery" id="jobSalary"><br><br>
-        <br>
-        <center>
-            <button id="search">Search</button>
-        </center>
-        <br>
+        <div class="input_holder"><input type="text" name="" placeholder="Search By Job Title" id="jobTitle"></div>
+        <div class="input_holder"><input type="text" name="" placeholder="Preffered Location" id="jobLocation"></div>
+        <div class="input_holder"><input type="text" name="" placeholder="Preffered Salery" id="jobSalary"></div>
+        <div class="input_holder">
+            <center>
+                <button id="search">SEARCH</button>
+            </center>
+        </div>
     </div>
 
     <div id="Jobs"></div>
