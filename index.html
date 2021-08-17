@@ -132,6 +132,16 @@
 
             $(document).ready(function() {
 
+
+
+                $("#allInputs input").keyup(function(event) {
+                    if (event.keyCode === 13) {
+                        $("#search").click();
+                    }
+                });
+
+
+
                 $.ajax({
                     type: "GET",
                     dataType: "JSON",
@@ -277,7 +287,7 @@
                         dd = dateObject[0];
                     }
 
-                    return [mm, dd, yyyy].join('/');
+                    return [dd, mm, yyyy].join('/');
                 }
             });
         });
