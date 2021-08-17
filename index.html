@@ -278,16 +278,16 @@
                 function formatDate(date) {
                     let dateObject = date.split('/');
 
-                    let mm = dateObject[0];
                     let dd = dateObject[1];
+                    let mm = dateObject[0];
                     let yyyy = dateObject[2];
 
-                    if (mm > 11) {
-                        mm = dateObject[1];
-                        dd = dateObject[0];
+                    if (dd > 11) {
+                        mm = dateObject[0];
+                        dd = dateObject[1];
                     }
 
-                    return [mm, dd, yyyy].join('/');
+                    return [dd, mm, yyyy].join('/');
                 }
             });
         });
