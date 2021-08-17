@@ -133,13 +133,11 @@
             $(document).ready(function() {
 
 
-
                 $("#allInputs input").keyup(function(event) {
                     if (event.keyCode === 13) {
                         $("#search").click();
                     }
                 });
-
 
 
                 $.ajax({
@@ -250,7 +248,7 @@
 
                             var itemDate = item.liveDate.split("/");
                             var datePattern = itemDate[1] + "/" + itemDate[0] + "/" + itemDate[2];
-                            $('<div class="job"></div>').html('<h1><a href="' + item.url + '">' + item.title + '</a></h1><p><em>' + item.displayLocation + '</em><br><strong>' + item.salary + '</strong><br><span class="dateDiv" data-time="' + item.liveDate + '">Date Posted: ' + item.liveDate + '</span></p><p>' + item.description + '</p><div class="job-btn"><a href="' + item.url + '" target="_blank">Find out more</a>').prependTo('#Jobs');
+                            $('<div class="job"></div>').html('<h1><a href="' + item.url + '">' + item.title + '</a></h1><p><em>' + item.displayLocation + '</em><br><strong>' + item.salary + '</strong><br><span class="dateDiv" data-time="' + datePattern + '">Date Posted: ' + datePattern + '</span></p><p>' + item.description + '</p><div class="job-btn"><a href="' + item.url + '" target="_blank">Find out more</a>').prependTo('#Jobs');
                         }
                     });
                 });
